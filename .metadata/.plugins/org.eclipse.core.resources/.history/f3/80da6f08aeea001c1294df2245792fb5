@@ -1,0 +1,9 @@
+package com.example.tecnoShop.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.tecnoShop.model.Imagenes;
+
+public interface ImagenesRepository extends JpaRepository<Imagenes,Integer> {
+
+}

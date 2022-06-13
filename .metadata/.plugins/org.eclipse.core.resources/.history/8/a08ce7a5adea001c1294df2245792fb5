@@ -1,0 +1,42 @@
+package com.example.tecnoShop.model;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity //representacion de la informacion que nosotros necesitamos
+@Table(name = "imagenes")
+public class Imagenes {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(nullable = false, name="id_imagen")// Aqui me quede jaja
+	private Integer id;
+		
+	@Column(nullable = false, name="nombre")
+	private String nombre;
+	
+	@Column(nullable = false, name="precio")
+	private Double precio;	
+	
+	@Column(nullable = false, name="color")
+	private String color;	
+	
+	@Column(nullable = true, name="categoria")
+	private String categoria;
+	
+	@Column(nullable = true, name="detalles")
+	private String detalles;
+	
+	@Column(nullable = true, name="stock")
+	private Integer stock;
+	
+	@Column(nullable = true, name="vendidos")
+	private Integer vendidos;
+
+}
